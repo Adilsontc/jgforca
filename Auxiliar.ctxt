@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Auxiliar
+comment0.text=\r\n\ A\ classe\ auxiliar\ recebe\ as\ letras\ digitadas,\ \r\n\ e\ compara\ com\ as\ letras\ da\ palavra\ sorteada.\r\n\ Se\ a\ letra\ for\ igual\ sera\ exibida\ na\ posi\u00E7\u00E3o\ da\ palavra,\r\n\ se\ n\u00E3o,\ ir\u00E1\ diminuir\ a\ vida\ dessa\ jogada.\r\n\ \r\n\ @author\ Adilson\ T\ Carmo\ (adilson.carmo@pucrs.br)\ \r\n\ @version\ 1.1\ (2021-06-15)\r\n
+comment1.params=
+comment1.target=java.lang.String\ palavraSorteada()
+comment2.params=sorteada
+comment2.target=int\ sorteada(java.lang.String)
+numComments=3
