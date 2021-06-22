@@ -1,7 +1,8 @@
 // Direitos Autorais, PUCRS/Escola Politécnica
 // Início: 2021-06-15
-// Atualização: 2021-06-07
-// https://github.com/Adilsontc
+// Atualização: 2021-06-18
+// Atualização: 2021-06-21
+// // https://github.com/Adilsontc/jgforca
 
 import java.util.Scanner;
 
@@ -18,16 +19,14 @@ public class MainApp extends Auxiliar
     {
         Auxiliar auxiliar = new Auxiliar();
         String sorteada = auxiliar.palavraSorteada();
-        int vidas = auxiliar.sorteada(sorteada);
-        if (vidas != 0)
+        int vidas = auxiliar.quantidadeVidas(sorteada);
+        if (vidas > 0)
         {
             System.out.println("\nParabéns... acertou miserávi!!");
         } else
         {
-            System.out.println("\nERROOOOU!!!");
+            System.out.println("\nERROOOOU!!! A palavra é " + sorteada);
         }
-        // testar e criar testes p/ classe auxiliar
-        
     }
     
 }

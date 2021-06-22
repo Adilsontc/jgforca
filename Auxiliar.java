@@ -1,7 +1,8 @@
 // Direitos Autorais, PUCRS/Escola Politécnica
 // Início: 2021-06-15
-// Atualização: 2021-06-07
-// https://github.com/Adilsontc
+// Atualização: 2021-06-18
+// Atualização: 2021-06-21
+// // https://github.com/Adilsontc/jgforca
 
 import java.util.*;
 
@@ -17,9 +18,9 @@ import java.util.*;
 class Auxiliar
 {
     
-    public String palavraSorteada()
+    public static String palavraSorteada()
         {
-        String [] palavras = {
+        String palavras[] = {
             "PROJETO", 
             "CRUZ", 
             "POMADA", 
@@ -34,22 +35,22 @@ class Auxiliar
             "ESTÁTUA",
             "PINTOR",
             "FRIO",
-            "BEBÊ",
+            "BEBE",
             "MÍMICO",
             "ESCOVA",
-            "LÁPIS",
+            "LAPIS",
             "LIVRO",
             "ASTRONAUTA",
             "AMOR",
-            "ÓDIO",
+            "ODIO",
             "CEGO",
             "CADEIRA",
             "SACOLA",
             "PROFESSOR",
-            "MÉDICO",
+            "MEDICO",
             "CALCULADORA",
             "ARTISTA",
-            "VITÓRIA",
+            "VITORIA",
             "PESCADOR",
             "INTERNET",
             "BASQUETE",
@@ -59,10 +60,10 @@ class Auxiliar
             "BILHETE",
             "XADREZ",
             "BANANA",
-            "MICRÓBIO",
+            "MICROBIO",
             "ROMANCE",
             "CARTEIRA",
-            "MÁQUINA",
+            "MAQUINA",
             "PRANCHA",
             "DEBATE",
             "LIXO",
@@ -74,55 +75,49 @@ class Auxiliar
         Random random = new Random();       
         int numeroRandom = random.nextInt(quantPalavras);
         String sorteada = palavras[numeroRandom];
-        //System.out.println(sorteada);
         return sorteada;
         }
 
-    public int sorteada(String sorteada)
+    public int quantidadeVidas(String sorteada)
         {        
-        sorteada = "amor";
-        System.out.println(sorteada);
         Scanner teclado;        
         teclado = new Scanner(System.in);
         String letraDigitada;
         String letrasUsadas = "";
-        int vidas = sorteada.length();
+        int vidas = 5;
         boolean ganhou = false;
-        char[] acertos = new char[sorteada.length()];
-        
+        char acertos[] = new char[sorteada.length()];
         
         do 
         {
-            int totalErros = 0;
-            System.out.print("\n Você tem " + vidas + " vidas\nQual letra vc deseja tentar?");
+            System.out.print("\nVocê tem " + vidas + " vidas\nQual letra vc deseja tentar?(Digite uma letra MAIÚSCULA.\n");
             letraDigitada = teclado.next();   
             letrasUsadas += " " + letraDigitada;
+            boolean perdeVida = true;
         
             for (int i = 0; i < sorteada.length(); i++)
             {   
                 if (letraDigitada.charAt(0) == (sorteada.charAt(i)))
                 {
                     acertos[i] = 1;
+                    perdeVida = false;
                 }
             }
-        
             ganhou = true;
             for (int i = 0; i < sorteada.length(); i++)
             {            
-                System.out.println(acertos[i]+"\n");
                 if (acertos[i] == 0)
                 {
                     System.out.print(" _ ");
                     ganhou = false;
-                    totalErros++;
                 } else
                 {
                     System.out.print(" " + sorteada.charAt(i) + " ");
                     
                 }
             }
-            System.out.println(totalErros+" "+sorteada.length()+" \n");
-            if (totalErros <= sorteada.length())
+            
+            if (perdeVida)
             {
                 vidas--;
             } 

@@ -4,5 +4,5 @@ comment0.text=\r\n\ A\ classe\ auxiliar\ recebe\ as\ letras\ digitadas,\ \r\n\ e
 comment1.params=
 comment1.target=java.lang.String\ palavraSorteada()
 comment2.params=sorteada
-comment2.target=int\ sorteada(java.lang.String)
+comment2.target=int\ quantidadeVidas(java.lang.String)
 numComments=3
